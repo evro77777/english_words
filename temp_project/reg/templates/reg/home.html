@@ -1,0 +1,36 @@
+{% extends 'reg/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="limiter">
+	    <div class="container-login100">
+		    <div class="wrap-login100 p-t-85 p-b-20">
+                {% if not result %}
+                <span class="login100-form-title p-b-70">
+					Перевод для слова {{english_word}}
+				</span>
+                <form   method="post">
+                    {% csrf_token %}
+                    {% for f in form %}
+                     {{f}}
+                    {% endfor %}
+                    <div class="container-login100-form-btn">
+                        <button class="login100-form-btn" type="submit">
+                            Send
+                        </button>
+                    </div>
+                </form>
+                {% else %}
+                <span class="login100-form-title p-b-70">
+					{{result}}
+				</span>
+                <a href="/">Начать заново </a>
+                {% endif %}
+                <a href="{% url 'logout' %}">Выйти</a>
+            </div>
+        </div>
+
+    </div>
+
+
+
+{% endblock %}

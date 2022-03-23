@@ -1,0 +1,32 @@
+.ans_option {
+    height:50px;
+    width:250px;
+    border:1px solid red;
+}
+
+.score {
+    height: 150px;
+    width: 150px;
+    background:#40E0D0;
+
+}
+
+.submit {
+    height:150px;
+    width:200px;
+    background:#00BFFF;
+    }
+
+.next {
+    height:150px;
+    width:200px;
+    background:#7B68EE;
+    }
+.input_as_text {
+    outline:none !important;
+
+    }
+.none {
+    display:none;
+
+}
